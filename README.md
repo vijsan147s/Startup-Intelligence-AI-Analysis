@@ -535,7 +535,7 @@ Permutation importance shuffles input columns, so it reports the seven raw featu
 
 ## Testing
 
-153 tests collected by pytest (129 test functions, expanded by `@parametrize`) covering:
+161 tests collected by pytest (129 test functions, expanded by `@parametrize`) covering:
 - CSV loading and schema validation
 - Date parsing
 - Funding amount parsing
@@ -560,6 +560,7 @@ Permutation importance shuffles input columns, so it reports the seven raw featu
 - Every third-party import in the entry points and the suite is declared in `requirements.txt`
 - The suite never writes to `models/` or `data/processed/`; a session guard fails the run if it does
 - The video renders at both orientations across its whole timeline, with no caption overflowing its panel
+- Every local path the README links exists, is not gitignored, and every embedded chart decodes as a real PNG
 
 ---
 

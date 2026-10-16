@@ -26,7 +26,9 @@ data/processed/*.csv
 data/processed/*.json
 models/*.joblib
 models/*.json
-reports/*.png
+# reports/*.png is deliberately NOT ignored: the README embeds these charts, so
+# ignoring them rendered eleven broken images on the front page. They total
+# about 1.2 MB and regenerate with `python run_pipeline.py`.
 reports/*.pdf
 # docs/video/*.mp4 is deliberately NOT ignored: the README Demo section links
 # both cuts, so ignoring them would leave a dead link on the front page. They

@@ -14,7 +14,7 @@ by `video_facts.py`, so this sheet regenerates rather than drifting.
 | 6. The Anti-Leakage Call | 42.0s | 50.0s | 8.0s | Random Forest scored higher on the test set. I didn't pick it, because it lost on cross validation. Picking it on test would have been fitting the answer I wanted. |
 | 7. Classification and Clustering | 50.0s | 60.0s | 10.0s | Classification splits rounds into low, medium and high. Thresholds from training percentiles only. Clustering lands on three segments. 2,062 events. |
 | 8. Explainability | 60.0s | 69.0s | 9.0s | Permutation importance and SHAP. Investment type dominates. Most other features are near zero, or negative. Investor features made it worse, so they ship disabled. |
-| 9. The App | 69.0s | 90.0s | 21.0s | Ten dashboard pages. 153 tests. A scheduled runner that skips itself when the CSV hasn't changed. A PDF generated from the live metrics, so the figures can't drift. Analytical prototype. Not investment advice. Which piece would you want the code for? |
+| 9. The App | 69.0s | 90.0s | 21.0s | Ten dashboard pages. 161 tests. A scheduled runner that skips itself when the CSV hasn't changed. A PDF generated from the live metrics, so the figures can't drift. Analytical prototype. Not investment advice. Which piece would you want the code for? |
 
 Total **90s**, 216 spoken words (~144 wpm).
 
@@ -24,14 +24,14 @@ Total **90s**, 216 spoken words (~144 wpm).
 - Total recorded funding: 38.06B USD
 - Amounts missing: 979   invalid dates: 4
 - Cities / industries / types normalized: 21 / 70 / 37
-- Tests collected by pytest: 153
+- Tests collected by pytest: 161
 - RF CV RMSLE 1.2741 -> test RMSLE 1.9138, MAE 35.4M, R2 -0.0274
 - Classifier: LogReg shipped (CV F1 0.5317, test F1 0.5386); RF test F1 0.5867 not shipped
 - Clustering: k=3, silhouette 0.2182, 2,062 events
 
 ## Corrections against the original package
 
-- test count: the package says 137; pytest collects 153
+- test count: the package says 137; pytest collects 161
 - cities normalized: the package says 20, CITY_NORMALIZATION has 21 entries
 - group-feature ablation: the package shows 'RM 2.4029 -> 1.8686', but the shipped Random Forest test RMSLE in model_metrics.json is 1.9138
 - permutation importance: the package calls city/year/month '~0'; they are negative and investors_name is the exact 0
