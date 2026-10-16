@@ -1,0 +1,121 @@
+1
+00:00:00,000 --> 00:00:02,000
+Three thousand forty four Indian startup
+
+2
+00:00:02,000 --> 00:00:03,800
+funding rounds. Thirty eight billion dollars.
+
+3
+00:00:03,800 --> 00:00:06,000
+And 979 of them with no disclosed amount.
+
+4
+00:00:06,000 --> 00:00:08,800
+979 rows have no amount.
+
+5
+00:00:08,800 --> 00:00:11,200
+4 have unparseable dates.
+
+6
+00:00:11,200 --> 00:00:13,000
+Most projects delete those and move on.
+
+7
+00:00:13,000 --> 00:00:16,200
+21 cities, 70 industry labels,
+
+8
+00:00:16,200 --> 00:00:19,000
+37 investment types.
+
+9
+00:00:19,000 --> 00:00:22,000
+All normalized by hand. Bangalore and Bengaluru
+are the same city.
+
+10
+00:00:22,000 --> 00:00:25,500
+One SQLite table, four views,
+
+11
+00:00:25,500 --> 00:00:28,500
+thirteen analysis queries.
+
+12
+00:00:28,500 --> 00:00:31,000
+Then the same thing again in Power BI.
+
+13
+00:00:31,000 --> 00:00:35,200
+Random Forest won, and it won on cross validation
+inside the training window.
+
+14
+00:00:35,200 --> 00:00:39,000
+RMSLE 1.27 against a 2.43 dummy baseline.
+
+15
+00:00:39,000 --> 00:00:42,000
+R squared is negative. I'm showing you that number too.
+
+16
+00:00:42,000 --> 00:00:45,500
+Random Forest scored higher on the test set.
+
+17
+00:00:45,500 --> 00:00:48,500
+I didn't pick it, because it lost on cross validation.
+
+18
+00:00:48,500 --> 00:00:50,000
+Picking it on test would have been fitting the answer I wanted.
+
+19
+00:00:50,000 --> 00:00:54,200
+Classification splits rounds into low, medium and high.
+
+20
+00:00:54,200 --> 00:00:57,500
+Thresholds from training percentiles only.
+
+21
+00:00:57,500 --> 00:01:00,000
+Clustering lands on three segments. 2,062 events.
+
+22
+00:01:00,000 --> 00:01:03,500
+Permutation importance and SHAP. Investment type dominates.
+
+23
+00:01:03,500 --> 00:01:06,500
+Most other features are near zero, or negative.
+
+24
+00:01:06,500 --> 00:01:09,000
+Investor features made it worse, so they ship disabled.
+
+25
+00:01:09,000 --> 00:01:12,500
+Ten dashboard pages.
+
+26
+00:01:12,500 --> 00:01:15,500
+153 tests.
+
+27
+00:01:15,500 --> 00:01:20,000
+A scheduled runner that skips itself when the CSV hasn't changed.
+
+28
+00:01:20,000 --> 00:01:24,500
+A PDF generated from the live metrics, so the figures can't drift.
+
+29
+00:01:24,500 --> 00:01:27,500
+Analytical prototype. Not investment advice.
+
+30
+00:01:27,500 --> 00:01:30,000
+Which piece would you want the code for?

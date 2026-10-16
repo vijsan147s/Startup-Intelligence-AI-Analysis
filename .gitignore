@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+venv/
+env/
+.venv/
+.env
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+data/processed/*.db
+data/processed/*.csv
+data/processed/*.json
+models/*.joblib
+models/*.json
+reports/*.png
+reports/*.pdf
+# docs/video/*.mp4 is deliberately NOT ignored: the README Demo section links
+# both cuts, so ignoring them would leave a dead link on the front page. They
+# are ~3 MB total and regenerate with `python make_video.py`.
+*.log
+logs/
